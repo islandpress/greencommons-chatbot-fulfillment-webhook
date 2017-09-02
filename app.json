@@ -1,0 +1,7 @@
+{
+  "name": "GreenCommons example API.AI webhook",
+  "description": "API.AI webhook demonstration",
+  "repository": "https://github.com/islandpress/greencommons-chatbot-fulfillment-webhook",
+  "logo": "http://xvir.github.io/img/apiai.png",
+  "keywords": ["api.ai", "natural language", "green commmons"]
+}
