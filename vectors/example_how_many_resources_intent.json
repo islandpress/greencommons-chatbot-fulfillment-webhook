@@ -1,0 +1,37 @@
+{
+  "id": "86ba84a0-aad4-4c48-ad5e-0624f69c18f8",
+  "timestamp": "2017-09-19T19:17:54.684Z",
+  "lang": "en",
+  "result": {
+    "source": "agent",
+    "resolvedQuery": "how many resources are on water?",
+    "action": "how_many_resources_response",
+    "actionIncomplete": false,
+    "parameters": {
+      "eco-topics": "water",
+      "resource_types": ""
+    },
+    "contexts": [],
+    "metadata": {
+      "intentId": "4f6c8097-dd2a-4343-a888-f2c3a6227b2e",
+      "webhookUsed": "false",
+      "webhookForSlotFillingUsed": "false",
+      "intentName": "GC-how-many-resources-intent"
+    },
+    "fulfillment": {
+      "speech": "There are _ many resources for water",
+      "messages": [
+        {
+          "type": 0,
+          "speech": "There are _ many resources for water"
+        }
+      ]
+    },
+    "score": 1
+  },
+  "status": {
+    "code": 200,
+    "errorType": "success"
+  },
+  "sessionId": "79c42f6a-7b72-4c00-923d-8b111a474c9d"
+}

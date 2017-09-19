@@ -1,0 +1,38 @@
+{
+  "id": "13fb80b9-feaa-44dd-9e7b-ff26947a545b",
+  "timestamp": "2017-09-19T19:18:22.018Z",
+  "lang": "en",
+  "result": {
+    "source": "agent",
+    "resolvedQuery": "show me books about ice",
+    "action": "show_me_response",
+    "actionIncomplete": false,
+    "parameters": {
+      "eco-topics": "ice",
+      "resource_types": "books"
+    },
+    "contexts": [],
+    "metadata": {
+      "intentId": "99e7a466-06d9-43e1-8689-24e6286b90bb",
+      "webhookUsed": "true",
+      "webhookForSlotFillingUsed": "false",
+      "intentName": "GC-show-me-intent"
+    },
+    "fulfillment": {
+      "speech": "I'll show you books about ice",
+      "messages": [
+        {
+          "type": 0,
+          "speech": "I'll show you books about ice"
+        }
+      ]
+    },
+    "score": 0.550000011920929
+  },
+  "status": {
+    "code": 206,
+    "errorType": "partial_content",
+    "errorDetails": "Webhook call failed. Error: Request timeout."
+  },
+  "sessionId": "79c42f6a-7b72-4c00-923d-8b111a474c9d"
+}
