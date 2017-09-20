@@ -98,22 +98,22 @@ def handle_howmanyresources(req):
     #resource_type = [req.get("result").get("parameters").get("resource_types")]
     all_resource_types = get_all_resource_types()
 
-    # resource_type = ','.join(all_resource_types)
-    # model_types = ['resources'] #, 'networks', 'lists']
-    # target_page = 1
-    # per_page = 1
-    # url = 'https://greencommons.herokuapp.com/api/v1/search?q={}' \
-    #       '&filters[resource_types]={}' \
-    #       '&filters[model_types]={}&page={}&per={}'.format(
-    #         q, resource_type, ','.join(model_types), target_page, per_page)
-    # r = requests.get(url)
+    resource_type = ','.join(all_resource_types)
+    model_types = ['resources'] #, 'networks', 'lists']
+    target_page = 1
+    per_page = 1
+    url = 'https://greencommons.herokuapp.com/api/v1/search?q={}' \
+          '&filters[resource_types]={}' \
+          '&filters[model_types]={}&page={}&per={}'.format(
+            q, resource_type, ','.join(model_types), target_page, per_page)
+    r = requests.get(url)
     # page = per = 0
     # if r.ok:
     #     j = r.json()
     #     last = j.get("links", {}).get("last")
     #     page = int(last.split("page=")[-1].split("&")[0])
     #     per = int(last.split("per=")[-1])
-    #approx_total = page*per
+    # approx_total = page*per
 
     approx_total = 1000
 
