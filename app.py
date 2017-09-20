@@ -41,9 +41,13 @@ def webhook():
     print(json.dumps(req, indent=4))
 
     func = request_dispatch(req)
+    if func:
+        speech = "func not null"
+    else:
+        speech "func is null"
     res = {
-        "speech": 'This is dummy text.',
-        "displayText": 'This is dummy text.',
+        "speech": speech,
+        "displayText": speech,
         # "data": data,
         # "contextOut": [],
         "source": "greencommons-chatbot-fulfillment-webhook"
