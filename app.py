@@ -176,11 +176,21 @@ def handle_showme(req):
 
 
 def handle_whatis(req):
+    # See: https://github.com/dbpedia/lookup
     q = req.get("result").get("parameters").get("eco-topics")
     if not q:
         return {}
-    speech = "Right now I can't tell you anything about {}. "\
-             "Ask me again once I've learned more.".format(q)
+
+    url = "http://lookup.dbpedia.org/api/search/PrefixSearch?QueryClass=&MaxHits=1&QueryString={}".format(
+        q)
+    r = requests.get(url, headers={'Accept': 'application/json'})
+    j = {}
+    if r.ok:
+        j = r.json()
+    if j.get('results'):
+        speech = j.get('results')[0].get('description')
+    else:
+        speech = "Sorry, I can't tell you anything about {}.".format(q)
     return {
         "speech": speech,
         "displayText": speech,
