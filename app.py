@@ -181,14 +181,20 @@ def handle_whatis(req):
     if not q:
         return {}
 
-    url = "http://lookup.dbpedia.org/api/search/PrefixSearch?QueryClass=&MaxHits=1&QueryString={}".format(
-        q)
+    hits = 5
+    url = "http://lookup.dbpedia.org/api/search/PrefixSearch?QueryClass=&MaxHits={}&QueryString={}".format(
+        hits, q)
     r = requests.get(url, headers={'Accept': 'application/json'})
     j = {}
     if r.ok:
         j = r.json()
     if j.get('results'):
-        speech = j.get('results')[0].get('description')
+        speech = ''
+        for res in j.get('results'):
+            speech += res.get('description') + '\n'
+            speech += "|-> Learn more here: " + res.get('uri') + '\n\n'
+        speech = speech.strip()
+        print(speech)
     else:
         speech = "Sorry, I can't tell you anything about {}.".format(q)
     return {
