@@ -106,7 +106,10 @@ def handle_howmanyresources(req):
           '&filters[resource_types]={}' \
           '&filters[model_types]={}&page={}&per={}'.format(
             q, resource_type, ','.join(model_types), target_page, per_page)
-    r = requests.get(url)
+    try:
+        r = requests.get(url)
+    except Exception as e:
+        print(e)
     # page = per = 0
     # if r.ok:
     #     j = r.json()
