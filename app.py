@@ -50,8 +50,9 @@ def webhook():
         # "contextOut": [],
         "source": "greencommons-chatbot-fulfillment-webhook"
     }
-    if func:
-        res = func(req)
+    res = processRequest(req)
+    # if func:
+    #     res = func(req)
 
     res = json.dumps(res, indent=4)
     print(res)
