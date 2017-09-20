@@ -110,11 +110,11 @@ def handle_howmanyresources(req):
     page = per = 0
     try:
         r = requests.get(url)
-        if r.ok:
-            j = r.json()
-            last = j.get("links", {}).get("last")
-            page = int(last.split("page=")[-1].split("&")[0])
-            per = int(last.split("per=")[-1])
+        # if r.ok:
+        #     j = r.json()
+        #     last = j.get("links", {}).get("last")
+        #     page = int(last.split("page=")[-1].split("&")[0])
+        #     per = int(last.split("per=")[-1])
     except Exception as e:
         print(e)
     approx_total = page*per
