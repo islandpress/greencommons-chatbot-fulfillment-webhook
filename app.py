@@ -110,15 +110,15 @@ def handle_howmanyresources(req):
         r = requests.get(url)
     except Exception as e:
         print(e)
-    # page = per = 0
-    # if r.ok:
-    #     j = r.json()
-    #     last = j.get("links", {}).get("last")
-    #     page = int(last.split("page=")[-1].split("&")[0])
-    #     per = int(last.split("per=")[-1])
-    # approx_total = page*per
+    page = per = 0
+    if r.ok:
+        j = r.json()
+        last = j.get("links", {}).get("last")
+        page = int(last.split("page=")[-1].split("&")[0])
+        per = int(last.split("per=")[-1])
+    approx_total = page*per
 
-    approx_total = 1000
+    #approx_total = 1000
 
     speech = "Green Commons has {} resources on {}.".format(
         approx_total, q)
