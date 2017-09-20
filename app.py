@@ -35,6 +35,32 @@ from flask import make_response
 app = Flask(__name__)
 
 
+#@app.route('/webhook', methods=['POST'])
+# def webhook():
+#     req = request.get_json(silent=True, force=True)
+
+#     print("Request:")
+#     print(json.dumps(req, indent=4))
+
+#     #func = request_dispatch(req)
+#     # res = {
+#     #     "speech": 'This is dummy text.',
+#     #     "displayText": 'This is dummy text.',
+#     #     # "data": data,
+#     #     # "contextOut": [],
+#     #     "source": "greencommons-chatbot-fulfillment-webhook"
+#     # }
+#     res = processRequest(req)
+#     # if func:
+#     #     res = func(req)
+
+#     res = json.dumps(res, indent=4)
+#     print(res)
+#     r = make_response(res)
+#     r.headers['Content-Type'] = 'application/json'
+#     return r
+
+
 @app.route('/webhook', methods=['POST'])
 def webhook():
     req = request.get_json(silent=True, force=True)
@@ -42,38 +68,13 @@ def webhook():
     print("Request:")
     print(json.dumps(req, indent=4))
 
-    #func = request_dispatch(req)
-    res = {
-        "speech": 'This is dummy text.',
-        "displayText": 'This is dummy text.',
-        # "data": data,
-        # "contextOut": [],
-        "source": "greencommons-chatbot-fulfillment-webhook"
-    }
     res = processRequest(req)
-    # if func:
-    #     res = func(req)
 
     res = json.dumps(res, indent=4)
-    print(res)
+    # print(res)
     r = make_response(res)
     r.headers['Content-Type'] = 'application/json'
     return r
-
-
-# def webhook():
-#     req = request.get_json(silent=True, force=True)
-
-#     print("Request:")
-#     print(json.dumps(req, indent=4))
-
-#     res = processRequest(req)
-
-#     res = json.dumps(res, indent=4)
-#     # print(res)
-#     r = make_response(res)
-#     r.headers['Content-Type'] = 'application/json'
-#     return r
 
 
 def request_dispatch(req):
@@ -260,7 +261,7 @@ def makeWebhookResult(data):
         "displayText": speech,
         # "data": data,
         # "contextOut": [],
-        "source": "greencommons-chatbot-fulfillment-webhook"
+        "source": "apiai-weather-webhook-sample"
     }
 
 
