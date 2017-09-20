@@ -24,6 +24,7 @@ from urllib.error import HTTPError
 
 import json
 import os
+import requests
 
 from flask import Flask
 from flask import request
@@ -106,16 +107,16 @@ def handle_howmanyresources(req):
           '&filters[resource_types]={}' \
           '&filters[model_types]={}&page={}&per={}'.format(
             q, resource_type, ','.join(model_types), target_page, per_page)
+    page = per = 0
     try:
         r = requests.get(url)
+        if r.ok:
+            j = r.json()
+            last = j.get("links", {}).get("last")
+            page = int(last.split("page=")[-1].split("&")[0])
+            per = int(last.split("per=")[-1])
     except Exception as e:
         print(e)
-    page = per = 0
-    if r.ok:
-        j = r.json()
-        last = j.get("links", {}).get("last")
-        page = int(last.split("page=")[-1].split("&")[0])
-        per = int(last.split("per=")[-1])
     approx_total = page*per
 
     #approx_total = 1000
