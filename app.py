@@ -49,9 +49,9 @@ def webhook():
         # "contextOut": [],
         "source": "greencommons-chatbot-fulfillment-webhook"
     }
-    res = handle_howmanyresources(req)
-    # if func:
-    #     res = func(req)
+    #res = handle_howmanyresources(req)
+    if func:
+        res = func(req)
     #res = processRequest(req)
 
     res = json.dumps(res, indent=4)
