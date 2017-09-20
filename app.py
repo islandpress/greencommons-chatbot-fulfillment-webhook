@@ -42,7 +42,7 @@ def webhook():
     print("Request:")
     print(json.dumps(req, indent=4))
 
-    func = request_dispatch(req)
+    #func = request_dispatch(req)
     res = {
         "speech": 'This is dummy text.',
         "displayText": 'This is dummy text.',
