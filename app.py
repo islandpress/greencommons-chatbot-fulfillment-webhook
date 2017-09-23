@@ -188,9 +188,12 @@ def handle_whatis(req):
         j = r.json()
     if j.get('results'):
         speech = ''
+        print(j.get('results'))
         for res in j.get('results'):
-            speech += res.get('description') + '\n'
-            speech += "|-> Learn more here: " + res.get('uri') + '\n\n'
+            if res.get('description'):
+                speech += res.get('description', '') + '\n'
+            if res.get('uri'):
+                speech += "|-> Learn more here: " + res.get('uri') + '\n\n'
         speech = speech.strip()
         print(speech)
     else:

@@ -1,6 +1,6 @@
 {
-  "id": "e9ca4f98-8d46-4005-a742-24ce546ccf8b",
-  "timestamp": "2017-09-23T03:17:58.77Z",
+  "id": "6ebbaf23-4b7e-4637-96d5-da2602b48dbc",
+  "timestamp": "2017-09-23T03:29:03.174Z",
   "lang": "en",
   "result": {
     "source": "agent",
@@ -8,32 +8,30 @@
     "action": "what_is_response",
     "actionIncomplete": false,
     "parameters": {
-      "eco-topics": "a coral reef"
+      "eco-topics": "coral reef"
     },
     "contexts": [],
     "metadata": {
       "intentId": "bd1afd3d-6b6a-4a4d-8136-d9af803b7334",
       "webhookUsed": "true",
       "webhookForSlotFillingUsed": "false",
-      "webhookResponseTime": 547,
       "intentName": "GC-what-is-intent"
     },
     "fulfillment": {
-      "speech": "The Coral Reefer Band is the touring and recording band of American popular music singer-songwriter Jimmy Buffett. Originally it was a fictional band consisting of the imaginary members Marvin Gardens, Kay Pasa, Al Vacado and Kitty Litter. The name \"Coral Reefer\" alludes to both coral reefs (in line with Buffett's tropical-themed music) and also \"reefer,\" which is slang for marijuana. The term is also related to sailing; a sailor who shortens or \"reefs\" a sail is a reefer.\n|-> Learn more here: http://dbpedia.org/resource/Coral_Reefer_Band",
-      "source": "greencommons-chatbot-fulfillment-webhook",
-      "displayText": "The Coral Reefer Band is the touring and recording band of American popular music singer-songwriter Jimmy Buffett. Originally it was a fictional band consisting of the imaginary members Marvin Gardens, Kay Pasa, Al Vacado and Kitty Litter. The name \"Coral Reefer\" alludes to both coral reefs (in line with Buffett's tropical-themed music) and also \"reefer,\" which is slang for marijuana. The term is also related to sailing; a sailor who shortens or \"reefs\" a sail is a reefer.\n|-> Learn more here: http://dbpedia.org/resource/Coral_Reefer_Band",
+      "speech": "Sorry, I can't tell you about coral reef.",
       "messages": [
         {
           "type": 0,
-          "speech": "The Coral Reefer Band is the touring and recording band of American popular music singer-songwriter Jimmy Buffett. Originally it was a fictional band consisting of the imaginary members Marvin Gardens, Kay Pasa, Al Vacado and Kitty Litter. The name \"Coral Reefer\" alludes to both coral reefs (in line with Buffett's tropical-themed music) and also \"reefer,\" which is slang for marijuana. The term is also related to sailing; a sailor who shortens or \"reefs\" a sail is a reefer.\n|-> Learn more here: http://dbpedia.org/resource/Coral_Reefer_Band"
+          "speech": "Sorry, I can't tell you about coral reef."
         }
       ]
     },
-    "score": 0.9399999976158142
+    "score": 1
   },
   "status": {
-    "code": 200,
-    "errorType": "success"
+    "code": 206,
+    "errorType": "partial_content",
+    "errorDetails": "Webhook call failed. Error: 500 INTERNAL SERVER ERROR"
   },
   "sessionId": "62c55dfa-e37e-4cb8-98b2-640e636b5c8e"
 }
