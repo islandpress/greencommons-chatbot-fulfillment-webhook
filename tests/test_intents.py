@@ -60,3 +60,12 @@ def test_whatis_intent():
     res = app.handle_whatis(d)
     print(res)
     assert res
+
+
+def test_whatis_intent2():
+    """Note: this is an integration test!"""
+    with open("../vectors/example_whatis_intent2.json") as fp:
+        d = json.load(fp)
+    res = app.handle_whatis(d)
+    print(res)
+    assert res
