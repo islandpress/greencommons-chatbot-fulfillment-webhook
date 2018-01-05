@@ -1,0 +1,34 @@
+{
+  "id": "120c2b52-271e-4c93-b817-dec841b3a8b0",
+  "timestamp": "2017-09-19T17:56:00.163Z",
+  "lang": "en",
+  "result": {
+    "source": "agent",
+    "resolvedQuery": "I'm fine",
+    "action": "input.unknown",
+    "actionIncomplete": false,
+    "parameters": {},
+    "contexts": [],
+    "metadata": {
+      "intentId": "8a477763-1852-441c-b5d1-776b6de6662b",
+      "webhookUsed": "false",
+      "webhookForSlotFillingUsed": "false",
+      "intentName": "Default Fallback Intent"
+    },
+    "fulfillment": {
+      "speech": "I didn't get that.",
+      "messages": [
+        {
+          "type": 0,
+          "speech": "Sorry, could you say that again?"
+        }
+      ]
+    },
+    "score": 1
+  },
+  "status": {
+    "code": 200,
+    "errorType": "success"
+  },
+  "sessionId": "79c42f6a-7b72-4c00-923d-8b111a474c9d"
+}

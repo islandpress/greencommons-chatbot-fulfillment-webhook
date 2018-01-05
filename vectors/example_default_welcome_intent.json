@@ -1,0 +1,34 @@
+{
+  "id": "e995bfba-cbbd-4b66-93b3-9d467ae00aa7",
+  "timestamp": "2017-09-19T17:59:24.098Z",
+  "lang": "en",
+  "result": {
+    "source": "agent",
+    "resolvedQuery": "hello",
+    "action": "input.welcome",
+    "actionIncomplete": false,
+    "parameters": {},
+    "contexts": [],
+    "metadata": {
+      "intentId": "300d6091-7fc7-4ee3-b3a8-ad1b350b0040",
+      "webhookUsed": "false",
+      "webhookForSlotFillingUsed": "false",
+      "intentName": "Default Welcome Intent"
+    },
+    "fulfillment": {
+      "speech": "Greetings!",
+      "messages": [
+        {
+          "type": 0,
+          "speech": "Hello!"
+        }
+      ]
+    },
+    "score": 1
+  },
+  "status": {
+    "code": 200,
+    "errorType": "success"
+  },
+  "sessionId": "79c42f6a-7b72-4c00-923d-8b111a474c9d"
+}

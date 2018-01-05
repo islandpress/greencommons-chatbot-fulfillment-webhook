@@ -1,0 +1,37 @@
+{
+  "id": "7a35f4a4-fb95-4897-8d4d-ad60e3546bd7",
+  "timestamp": "2017-09-19T20:42:01.039Z",
+  "lang": "en",
+  "result": {
+    "source": "agent",
+    "resolvedQuery": "show me a video about sustainability",
+    "action": "show_me_response",
+    "actionIncomplete": false,
+    "parameters": {
+      "eco-topics": "sustainability",
+      "resource_types": "videos"
+    },
+    "contexts": [],
+    "metadata": {
+      "intentId": "99e7a466-06d9-43e1-8689-24e6286b90bb",
+      "webhookUsed": "true",
+      "webhookForSlotFillingUsed": "false",
+      "webhookResponseTime": 192,
+      "intentName": "GC-show-me-intent"
+    },
+    "fulfillment": {
+      "messages": [
+        {
+          "type": 0,
+          "speech": "I'll show you videos about sustainability"
+        }
+      ]
+    },
+    "score": 0.550000011920929
+  },
+  "status": {
+    "code": 200,
+    "errorType": "success"
+  },
+  "sessionId": "79c42f6a-7b72-4c00-923d-8b111a474c9d"
+}

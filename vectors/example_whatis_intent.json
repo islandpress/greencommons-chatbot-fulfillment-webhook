@@ -1,0 +1,36 @@
+{
+  "id": "7c1fec59-203a-4342-a029-b518aa946c41",
+  "timestamp": "2017-09-19T19:18:46.376Z",
+  "lang": "en",
+  "result": {
+    "source": "agent",
+    "resolvedQuery": "what is global warming?",
+    "action": "what_is_response",
+    "actionIncomplete": false,
+    "parameters": {
+      "eco-topics": "global warming"
+    },
+    "contexts": [],
+    "metadata": {
+      "intentId": "bd1afd3d-6b6a-4a4d-8136-d9af803b7334",
+      "webhookUsed": "true",
+      "webhookForSlotFillingUsed": "false",
+      "webhookResponseTime": 85,
+      "intentName": "GC-what-is-intent"
+    },
+    "fulfillment": {
+      "messages": [
+        {
+          "type": 0,
+          "speech": "I'll tell you about global warming"
+        }
+      ]
+    },
+    "score": 1
+  },
+  "status": {
+    "code": 200,
+    "errorType": "success"
+  },
+  "sessionId": "79c42f6a-7b72-4c00-923d-8b111a474c9d"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "6ebbaf23-4b7e-4637-96d5-da2602b48dbc",
+  "timestamp": "2017-09-23T03:29:03.174Z",
+  "lang": "en",
+  "result": {
+    "source": "agent",
+    "resolvedQuery": "what is a coral reef?",
+    "action": "what_is_response",
+    "actionIncomplete": false,
+    "parameters": {
+      "eco-topics": "coral reef"
+    },
+    "contexts": [],
+    "metadata": {
+      "intentId": "bd1afd3d-6b6a-4a4d-8136-d9af803b7334",
+      "webhookUsed": "true",
+      "webhookForSlotFillingUsed": "false",
+      "intentName": "GC-what-is-intent"
+    },
+    "fulfillment": {
+      "speech": "Sorry, I can't tell you about coral reef.",
+      "messages": [
+        {
+          "type": 0,
+          "speech": "Sorry, I can't tell you about coral reef."
+        }
+      ]
+    },
+    "score": 1
+  },
+  "status": {
+    "code": 206,
+    "errorType": "partial_content",
+    "errorDetails": "Webhook call failed. Error: 500 INTERNAL SERVER ERROR"
+  },
+  "sessionId": "62c55dfa-e37e-4cb8-98b2-640e636b5c8e"
+}
