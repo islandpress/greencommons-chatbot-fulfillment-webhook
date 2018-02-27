@@ -101,7 +101,7 @@ def handle_howmanyresources(req):
     model_types = ['resources'] #, 'networks', 'lists']
     target_page = 1
     per_page = 1
-    url = 'https://greencommons.herokuapp.com/api/v1/search?q={}' \
+    url = 'https://greencommons.net/api/v1/search?q={}' \
           '&filters[resource_types]={}' \
           '&filters[model_types]={}&page={}&per={}'.format(
             q, resource_type, ','.join(model_types), target_page, per_page)
@@ -141,7 +141,7 @@ def handle_showme(req):
     model_types = ['resources'] #, 'networks', 'lists']
     target_page = 1
     per_page = 10
-    url = 'https://greencommons.herokuapp.com/api/v1/search?q={}' \
+    url = 'https://greencommons.net/api/v1/search?q={}' \
           '&filters[resource_types]={}' \
           '&filters[model_types]={}&page={}&per={}'.format(
             q, resource_type, ','.join(model_types),
