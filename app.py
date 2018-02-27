@@ -70,23 +70,27 @@ def request_dispatch(req):
 
 
 def get_all_resource_types():
-    return ['articles','books','reports','urls','audios',
-            'courses','datasets','images','syllabuses',
-            'videos','profiles']
+    return ['articles','audio','books','courses','datasets','events','images',
+            'posts','profiles','reports','slides','software','syllabi',
+            'urls','videos']
 
 
 def get_resource_type_singular_dict():
     return {'articles': 'article',
-            'books': 'book',
-            'reports': 'report',
-            'urls': 'url',
             'audios': 'audio file',
+            'books': 'book',
             'courses': 'course',
             'datasets': 'dataset',
+            'events': 'event',
             'images': 'image',
-            'syllabuses': 'syllabus',
-            'videos': 'video',
-            'profiles': 'profile'}
+            'posts': 'post',
+            'profiles': 'profile',
+            'reports': 'report',
+            'slides': 'slide',
+            'software': 'software',
+            'urls': 'url',
+            'syllabi': 'syllabus',
+            'videos': 'video'}
 
 
 def handle_howmanyresources(req):
